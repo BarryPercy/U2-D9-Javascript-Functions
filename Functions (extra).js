@@ -14,16 +14,19 @@ function giveMeRandom(n){
 }
 
 function checkArray(array){
+    let sum = 0;
     for(i=0;i<array.length;i++){
         if(array[i]>5){
             console.log("Element",i,"which is the number",array[i],"is greater than 5");
+            sum+=array[i];
         }else{
             console.log("Element",i,"which is the number",array[i],"is smaller than or equal to 5");
         }
     }
+    return sum;
 }
 
-const result1 = checkArray(giveMeRandom(10));
+console.log("1.",checkArray(giveMeRandom(10)));
 
 /* EXTRA 2
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
@@ -78,12 +81,14 @@ console.log("3.", result3);
 
 function maxShoppingCart(cart){
     let mostexpensive = 0;
+    let mostExpensiveItem=null;
     for(i=0;i<cart.length;i++){
         if(cart[i].price>mostexpensive){
             mostexpensive = cart[i].price;
+            mostExpensiveItem=cart[i];
         }
     }
-    return mostexpensive;
+    return mostExpensiveItem;
 }
 const result4 = maxShoppingCart(shoppingCart);
 console.log("4.", result4);
