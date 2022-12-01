@@ -43,7 +43,7 @@ console.log("2.", result2);
 */
 
 function crazyDiff(x){
-     if((Math.abs(19-x))>19){
+     if(x>19){
             return (Math.abs(19-x))*3;
         }else{
             return Math.abs(19-x);
@@ -60,7 +60,7 @@ console.log("3.", result3);
 function boundary(n){
     if(parseInt(n)!==n){
         return "n is not an integer"
-    }else if((n>=20&&n<=100)||n===400){
+    }else if((n>20&&n<=100)||n===400){
         return true;
     }else{
         return false;
@@ -82,7 +82,7 @@ function strivify(string){
         return "Strive"+string;
     }
 }
-const result5 = strivify("Strive hey it's me Billy");
+const result5 = strivify("hey it's me Barry");
 console.log("5.", result5);
 
 /* EXERCISE 6
@@ -91,7 +91,7 @@ console.log("5.", result5);
 */
 
 function check3and7(n){
-    if(n%3===0||n%7===0){
+    if(n>0&&(n%3===0||n%7===0)){
         return true;
     }else{
         return false;
